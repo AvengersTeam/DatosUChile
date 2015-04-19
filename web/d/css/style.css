@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Pacifico|Francois+One);
+
+body {
+  padding-bottom: 20px;
+  background-color: #f8f9fa;
+  font-family: 'Open Sans', sans-serif;
+}
+.navbar-uchile {
+  background-color: transparent; 
+  color: white;
+}
+.navbar-uchile .navbar-brand {
+  color: white;
+  font-family: 'Francois One', sans-serif;
+  font-size: 1.5em;
+}
+.navbar-uchile #navbar a {
+  color: white !important;
+  padding-top: 18px !important;
+  padding-bottom: 5px !important;
+  font-family: 'Francois One', sans-serif;
+}
+.navbar-uchile #navbar .active a,
+.navbar-uchile #navbar a:hover {
+  border-bottom: 2px solid white;
+  background-color: transparent !important;
+}
+
+.navbar-uchile .navbar-brand small {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.6em;
+  position: relative;
+  top: -6px;
+  left: 0px;
+}
+.jumbotron {
+  color: white;
+  padding-top: 150px !important;
+  min-height: 450px;
+  background-image: url( '../img/jumbofondogris.jpg' );
+  background-position: 0% 0%;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba( 68, 79, 111, 0.8 );
+}
+.jumbotron h1 {
+  color: #f2634a;
+  font-family: 'Pacifico', cursive;
+}
+.btn-uncolor {
+  border: 2px solid white;
+  color: white;
+}
+.btn-uncolor:hover, .btn-uncolor:active {
+  color: #333;
+  background-color: white;
+  font-weight: bold;
+}
