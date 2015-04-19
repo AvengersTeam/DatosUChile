@@ -8,6 +8,10 @@ body {
 .navbar-uchile {
   background-color: transparent; 
   color: white;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 .navbar-uchile .navbar-brand {
   color: white;

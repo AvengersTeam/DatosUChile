@@ -50,6 +50,4 @@ foreach( $autoridades as $v ) {
 
 file_put_contents( "../template/tmp/cache.data", serialize( $posibles ) );
 
-include( template( '../template/head.html' ) );
-include( template( '../template/index.html' ) );
-include( template( '../template/foot.html' ) );
+echo 1;
