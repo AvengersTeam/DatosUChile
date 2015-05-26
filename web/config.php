@@ -7,5 +7,6 @@ require( '../include/func.php' );
 
 session_start();
 
-/* cosas iniciales aqui... como el tener variables "globales" */
-$puede_ver = TRUE; //Ejemplo
+$PAR = array();
+if( isset( $_REQUEST['r'] ) ) $PAR = preg_split( '/\//', trim( $_REQUEST['r'] ), -1, PREG_SPLIT_NO_EMPTY );  
+
