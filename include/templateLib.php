@@ -31,3 +31,10 @@ function halting_error( $msg ) {
   /* Pagina que muestra mensahe de error */
   return $msg;
 }
+
+function print_a() {
+  echo '<div style="width:100%;border:1px solid red;"><pre>';
+  print_r( func_get_args() );
+  echo '</pre></div>';
+}
+

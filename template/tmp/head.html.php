@@ -26,7 +26,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Inicio</a></li>
             <li><a href="documentacion.html">Documentación</a></li>
-            <li><a href="endpoint.html">EndPoint</a></li>
+            <li><a href="sparql">EndPoint</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </div>
