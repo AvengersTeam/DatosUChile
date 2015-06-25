@@ -1,44 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <base href="http://datos.uchile.cl/">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="d/css/style.css">
-  </head>
-  <body>
-    <nav class="navbar navbar-uchile">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="">Datos Abiertos<br/><small>Universidad de Chile</small></a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse pull-right">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Inicio</a></li>
-            <li><a href="documentacion.html">Documentación</a></li>
-            <li><a href="sparql">EndPoint</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>datos.uchile.cl</title>
 
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Datos Abiertos!</h1>
-        <p>El proyecto de la Universidad de Chile para compartir información enlazada, ya sea de autoridades, publicaciones, libros, revistas, entre otros. Conoce más de la tecnologia ocupada haciendo click en el siguiente botón:</p>
-        <p><a class="btn btn-uncolor btn-lg" href="#" role="button">Aprender más &raquo;</a></p>
-      </div>
+<link rel="stylesheet" type="text/css" href="d/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="d/css/style.css">
+<script type="text/javascript" src="d/js/jquery.min.js"></script>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-fixed-top">
+    <div id="logo-header" class="col-xs-6 col-sm-3"><a href="#">datos.uchile.cl</a></div>
+    <div id="buscador-principal" class="col-xs-6 col-sm-5"><input type="search" placeholder="Buscar..."><button type="submit">Buscar</button></div>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button> 
     </div>
+    <div id="navbar" class="navbar-collapse collapse navbar-right col-xs-6 col-sm-4" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Autores</a></li>
+        <li><a href="#">Obras</a></li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="#">Instituciones</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-    <div class="container">
+<div class="clearfix"></div>

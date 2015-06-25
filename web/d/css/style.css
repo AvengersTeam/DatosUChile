@@ -1,61 +1,89 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans|Pacifico|Francois+One);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,700|Montserrat);
 
-body {
-  padding-bottom: 20px;
-  background-color: #f8f9fa;
-  font-family: 'Open Sans', sans-serif;
-}
-.navbar-uchile {
-  background-color: transparent; 
-  color: white;
-  position: absolute;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-.navbar-uchile .navbar-brand {
-  color: white;
-  font-family: 'Francois One', sans-serif;
-  font-size: 1.5em;
-}
-.navbar-uchile #navbar a {
-  color: white !important;
-  padding-top: 18px !important;
-  padding-bottom: 5px !important;
-  font-family: 'Francois One', sans-serif;
-}
-.navbar-uchile #navbar .active a,
-.navbar-uchile #navbar a:hover {
-  border-bottom: 2px solid white;
-  background-color: transparent !important;
-}
 
-.navbar-uchile .navbar-brand small {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.6em;
-  position: relative;
-  top: -6px;
-  left: 0px;
-}
-.jumbotron {
-  color: white;
-  padding-top: 150px !important;
-  min-height: 450px;
-  background-image: url( '../img/jumbofondogris.jpg' );
-  background-position: 0% 0%;
-  background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba( 68, 79, 111, 0.8 );
-}
-.jumbotron h1 {
-  color: #f2634a;
-  font-family: 'Pacifico', cursive;
-}
-.btn-uncolor {
-  border: 2px solid white;
-  color: white;
-}
-.btn-uncolor:hover, .btn-uncolor:active {
-  color: #333;
-  background-color: white;
-  font-weight: bold;
+/* CSS Document */
+
+div{transition:all ease-in-out 0.4s;}
+
+/** colores **/
+/* backgrounds */
+.bg-magenta{background-color:#a80264;}
+.bg-naranjo{background-color:#f7941d;}
+.bg-celeste{background-color:#64aac3;}
+.bg-gris{background-color:#e7e7e7;}
+.bg-verde-oscuro{background-color:#002c39;}
+.bg-amarillo{background-color:#deb935;}
+.bg-negro{background-color:#010101;}
+.bg-blanco{background-color:#FFF;}
+
+
+/* textos */
+.c-magenta{color:#a80264;}
+.c-naranjo{color:#f7941d;}
+.c-celeste{color:#64aac3;}
+.c-gris{:#e7e7e7;}
+.c-verde-oscuro{color:#002c39;}
+.c-amarillo{color:#deb935;}
+.c-negro{color:#010101;}
+.c-blanco{color:#FFF;}
+
+b, strong{font-weight:700;}
+i, em{font-style:italic;}
+
+b i, strong i, 
+b em, strong em, 
+i b, i strong, 
+em b, em strong{font-style:italic; font-weight:700;}
+
+
+/* estilos */
+body{font-family: 'Roboto', sans-serif;}
+h1,h2,h3,h4,h5,h6, #logo-header a{font-family: 'Montserrat', sans-serif; font-weight: 400; }
+h1,h2,h3,h4,h5,h6{line-height:150%;}
+
+a{color:inherit; text-decoration:none;}
+a:hover{color:inherit;}
+
+body.smint-body{transition:all ease-in-out 0.4s;}
+header{height:80px; clear:both; background:#FFF; z-index:1000;}
+.navbar-header, #navbar, .navbar{background:#FFF; z-index:1001;}
+
+#logo-header a{font-size:2em; font-style:italic; color:#666;}
+
+.wrap{width:1260px; margin:0 auto; display:block;}
+
+#info-complementaria{background:rgba(47,153,251,0.3);}
+#info-complementaria:hover{background:rgba(47,153,251,0.7);}
+
+section{overflow:hidden; display:block; clear:both;}
+
+footer{background:#000; color:#FFF; overflow:hidden;}
+
+/** portada **/
+/* buscador principal */
+.smint-body #buscador-principal{opacity:0; visibility:hidden; transition:all ease-in-out 0.4s; height:0; position:absolute; top:-100px; z-index:-2; overflow:hidden;}
+#buscador-principal{opacity:1; visibility:visible; height:auto; position:relative; top:0;}
+
+.smint-body #buscador-smint{opacity:1; transition:all ease-in-out 0.4s;}
+#buscador-smint{opacity:0;}
+
+.subMenu{overflow:hidden; z-index: 99;}
+.subMenu, .subMenu ul{width:100%; margin:0;}
+.subMenu ul li{list-style:none; text-align:center; padding:10px 0;;}
+
+
+
+/** ficha **/
+#menu-lateral{overflow:hidden;}
+.anchorific ul li a{color:#FFF; transition:all ease-in-out 0.3s;}
+.anchorific li.active > a{background:rgba(255,255,255,0.1);}
+
+@media screen and (max-width: 1260px) {
+    .wrap, .subMenu ul {
+        width:100%;
+    }
+	.subMenu .wrap{
+		margin-left:0%;
+		left:0px;
+	}
 }

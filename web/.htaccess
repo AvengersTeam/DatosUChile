@@ -1,6 +1,6 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule sparql http://datos.uchile.cl:9090/sparql [L]
-RewriteRule ^(.*)$ %{REQUEST_FILENAME}?r=$1 [L]
-</IfModule>
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule sparql http://datos.uchile.cl:9090/sparql [L]
+#RewriteRule ^(.*)$ %{REQUEST_FILENAME}?r=$1 [L]
+#</IfModule>
