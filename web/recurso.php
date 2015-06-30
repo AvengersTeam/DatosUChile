@@ -1,23 +1,42 @@
 <?php
 require( 'config.php' );
-if ( ! $PAR || count( $PAR ) < 2 || count( $PAR ) > 4 ) {
+
+$_recurso = array();
+if( isset( $_REQUEST['r'] ) ) {
+  $_recurso = preg_split( '/\//', trim( $_REQUEST['r'] ), -1, PREG_SPLIT_NO_EMPTY );
+}
+
+if ( ! $_recurso || count( $_recurso ) != 2 ) {
   echo 'error con la url';
   exit;
 }
 
-/*$tipos = array(
+/*
+$tipos = array(
   'expresion' => 'frbrer:C1002',
   'manifestacion' => 'frbrer:C1003',
   'obra' => 'frbrer:C1001',
   'nacimiento' => 'bio:Birth',
   'muerte' => 'bio:Death'
+);
+ */
+$formatos = array_flip( array(
+  'text/html',
+  'application/sparql-results+json',
+  'application/javascript',
+  'text/turtle',
+  'text/plain',
+  'application/sparql-results+xml',
+  'text/csv',
+  'text/tab-separated-values',
+  'application/rdf+xml',
+  'application/json'
+) );
 
-);*/
-
-$t = $PAR[1];
-$id = isset( $PAR[2] ) ? $PAR[2] : '';
-$format = isset( $PAR[3] ) ? urlencode( $PAR[3] ) : 'text/html';
-$url = "http://datos.uchile.cl/recurso/$t/$id";
+$tipo = $_recurso[0];
+$id = isset( $_recurso[1] ) ? $_recurso[1] : '';
+$format = trim( (string)$_REQUEST['format'] );
+$url = "http://datos.uchile.cl/recurso/$tipo/$id";
 
 $sparql = urlencode( "
 select ?a ?b ?c 
@@ -27,11 +46,19 @@ where {
 }    
 " ); 
 
-$peti = wget( "http://datos.uchile.cl:9090/sparql?query=$sparql&format=$format" );
+$url_sparql = "http://datos.uchile.cl/sparql?query=$sparql&format=".urlencode( ! isset( $formatos[$format] ) ? "application/sparql-results+json" : $format );
+$res = wget( $url_sparql );
 
+//Se debe checkear la existencia de resultado
 
+if( isset( $formatos[$format] ) ) {
+  header( 'Content-type: '.$format );
+  echo $res;
+  exit;
+}
+
+$require_base = TRUE; //hack for relative urls
 include( template( '../template/head.html' ) );
-include( template( '../template/recurso.html' ) );
+include( template( '../template/ficha_'.$tipo.'.html' ) );
 include( template( '../template/foot.html' ) );
-
 
