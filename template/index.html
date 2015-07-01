@@ -139,24 +139,29 @@
   <div class="row text-center">
     <div class="col-sm-6">
       <h3 class="text-uppercase">Quiénes somos</h3>
-      <p>Muy lejos, más allá de las montañas de palabras, alejados de los países de las vocales y las consonantes, viven los textos simulados. Viven aislados en casas de letras, en la costa de la semántica, un gran océano de lenguas.</p>
+      <p style="text-align:justify">El portal datos.uchile.cl es un lugar donde es posible encontrar todo tipo de información relacionada a la Universidad de Chile.<br/>Contiene datos abiertos a toda persona o entidad que desee consultar por obras, revistas, autores, presidentes de Chile, investigación, tesis y un sin fin de datos que son explorables cómoda y libremente.</p>
       <a href="#" class="btn btn-mas">Más</a>
     </div>
     <div class="col-sm-6">
       <h3 class="text-uppercase">¿Qué es Open Data?</h3>
-      <p>Muy lejos, más allá de las montañas de palabras, alejados de los países de las vocales y las consonantes, viven los textos simulados. Viven aislados en casas de letras, en la costa de la semántica, un gran océano de lenguas.</p>
+      <p style="text-align:justify">Open Data o Datos Abiertos es una filosofía que tiene por objetivo mostrar a todo el mundo una grán cantidad de datos de forma libre y reutilizable, sin el obstáculo que implica la presencia de patentes, licencias o copyright.</p>
       <a href="#" class="btn btn-mas">Más</a>
     </div>
   </div>
   <div class="row text-center">
     <div class="col-sm-6">
       <h3 class="text-uppercase">Metodología</h3>
-      <p>Muy lejos, más allá de las montañas de palabras, alejados de los países de las vocales y las consonantes, viven los textos simulados. Viven aislados en casas de letras, en la costa de la semántica, un gran océano de lenguas.</p>
+      <p style="text-align:justify">Aplicación creada en lenguaje PHP que conecta a un triplestore Virtuoso, el cual esta positivamente evaluado por su buen funcionamiento promedio respecto a otros triplestores.<br/>
+        Para la generación de ETLs se utilizó el lenguaje Java. Estos pasan de distintos XML de bases de datos relacionales a archivos en formato RDF, almacenables en Virtuoso siguiendo como pauta una Ontología, la cual es el esqueleto de las relaciones semánticas entre los distintos tipos de datos.</p>
       <a href="#" class="btn btn-mas">Más</a>
     </div>
     <div class="col-sm-6">
       <h3 class="text-uppercase">Cómo usar el sitio</h3>
-      <p>Muy lejos, más allá de las montañas de palabras, alejados de los países de las vocales y las consonantes, viven los textos simulados. Viven aislados en casas de letras, en la costa de la semántica, un gran océano de lenguas.</p>
+      <p style="text-align:justify">Le invitamos a utilizar las diferentes opciones que ofrece el sitio para realizar búsquedas.<br/>
+        Existe una forma simple y otra más técnica para búsquedas de mayor complejidad.<br/>
+        La primera consta de un buscador que recibe texto y se realiza la búsqueda según las coincidencias con éste.<br/>
+        La segunda forma es utilizar el Endpoint con el cual mediante el lenguaje SparQL, que es similar al popular SQL, se realizan consultas más elaboradas que vayan de acuerdo a lo deseado. 
+        <br/>Para aprender a usar el Endpoint, haga click <a href="#"><b>AQUÍ</b></a>.</p>
       <a href="#" class="btn btn-mas">Más</a>
     </div>
   </div>
