@@ -7,7 +7,10 @@
 .bg-verde-oscuro{background-color:#002c39;}
 .bg-amarillo{background-color:#deb935;}
 .bg-negro{background-color:#010101;}
-.bg-blanco{background-color:#FFF;}
+.bg-blanco{
+  background-color:#FFF;
+  padding: 30px 40px;
+}
 .c-magenta{color:#a80264;}
 .c-naranjo{color:#f7941d;}
 .c-celeste{color:#64aac3;}
@@ -55,8 +58,8 @@ a:hover{
 }
 .navbar-fixed-top {
   background-color: #fff;
-  padding-left: 12%;;
-  padding-right: 12%;
+  padding-left: 13%;;
+  padding-right: 13%;
 }
 #buscador-principal {
   padding-top: 7px;
@@ -118,7 +121,7 @@ section.buscador .nav-form button.btn {
 }
 
 .submenu {
-  z-index: 99;
+  z-index: 1999;
   background-color: #333;
 }
 .submenu .nav {
@@ -173,8 +176,23 @@ section.buscador .nav-form button.btn {
   background-color: #fff;
 }
 
+ul.typeahead.dropdown-menu {
+  width: 100%;
+}
+ul.typeahead.dropdown-menu li.active a {
+  background-color: #444;
+}
 
 /** ficha **/
+div.rec-nombre {
+  color: #fff;
+  background-color: #333;
+  padding: 20px 15%;
+}
+div.rec-nombre h4 {
+  color: #ccc;
+}
+
 #menu-lateral{
   overflow:hidden;
 }

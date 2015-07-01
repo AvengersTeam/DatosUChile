@@ -38,6 +38,9 @@
 <script type="text/javascript" src="d/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="d/js/jquery.easing.min.js"></script>
 <script type="text/javascript" src="d/js/typeahead.js"></script>
+<?php  if( $is_index ) {  ?>
+<script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
+<?php  }  ?>
 <script type="text/javascript">
 $( function() {
   var busc_height = $( 'section.buscador' ).height();
@@ -70,6 +73,24 @@ $( function() {
       window.location.href = item.url;
     }
   } );
+  $( 'div.row.adjust' ).each( function() {
+    var maxHeight = 0;
+    $(this).find( 'div' ).each( function() { maxHeight = maxHeight < $(this).innerHeight() ? $(this).innerHeight() : maxHeight; } );
+    $(this).find( 'div' ).each( function() { if( ! $(this).hasClass( 'noresize' ) ) $(this).innerHeight( maxHeight ); } );
+  } );
+ 
+<?php  if( $is_index ) {  ?>
+  $.getJSON( '_timeline.php', function( data ) {
+   createStoryJS({
+      type:     'timeline',
+      width:    '100%',
+      height:   '350',
+      source:   data,
+      embed_id: 'descubre-timeline',
+      lang:     'es'
+    });
+  } );
+<?php  }  ?>  
 } );
 </script>
 </body>

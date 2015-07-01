@@ -38,27 +38,25 @@ $id = isset( $_recurso[1] ) ? $_recurso[1] : '';
 $format = trim( (string)$_REQUEST['format'] );
 $url = "http://datos.uchile.cl/recurso/$tipo/$id";
 
-$sparql = urlencode( "
-select ?a ?b ?c 
-where { 
-  ?a ?b ?c .
-  filter regex( str( ?a ), '$url' )
-}    
-" ); 
+$sparql = urlencode( "select distinct ?a ?b ?c where { ?a ?b ?c . filter regex( str( ?a ), '$url' ) }" ); 
 
 $url_sparql = "http://datos.uchile.cl/sparql?query=$sparql&format=".urlencode( ! isset( $formatos[$format] ) ? "application/sparql-results+json" : $format );
 $res = wget( $url_sparql );
 
 //Se debe checkear la existencia de resultado
-
 if( isset( $formatos[$format] ) ) {
   header( 'Content-type: '.$format );
   echo $res;
   exit;
 }
 
+$res = json_decode( $res, TRUE );
+$nombre = "";
+foreach( $res['results']['bindings'] as $v ) {
+  if( preg_match( '/(title|name)$/', $v['b']['value'] ) ) $nombre = $v['c']['value']; 
+}
+
 $require_base = TRUE; //hack for relative urls
 include( template( '../template/head.html' ) );
-include( template( '../template/ficha_'.$tipo.'.html' ) );
+include( template( '../template/ficha.html' ) );
 include( template( '../template/foot.html' ) );
-
