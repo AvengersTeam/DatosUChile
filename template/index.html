@@ -24,19 +24,19 @@
     <div id="autores" class="col-sm-3">
       <h3>Autores</h3>
       <ul class="bg-blanco">
-        <li><a href="#">Link de prueba</a></li>
-        <li><a href="#">Link de prueba</a></li>
-        <li><a href="#">Link de prueba</a></li>
-        <li><a href="#">Link de prueba</a></li>
+        <li><a href="recurso/autoridad/XX563319">Luython, Carolus</a></li>
+        <li><a href="recurso/autoridad/201-0166175">Miguel de Cervantes Saavedra</a></li>
+        <li><a href="recurso/autoridad/XX625215">Pablo Neruda</a></li>
+        <li><a href="recurso/autoridad/XX580558">Gabriela Mistral</a></li>
       </ul>
     </div>
     <div id="obras" class="col-sm-3">
       <h3>Obras</h3>
       <ul class="bg-blanco">
-        <li><a href="#">Link de prueba</a></li>
-        <li><a href="#">Link de prueba</a></li>
-        <li><a href="#">Link de prueba</a></li>
-        <li><a href="#">Link de prueba</a></li>
+        <li><a href="recurso/obra/40033">El cóndor y el poeta</a></li>
+        <li><a href="recurso/obra/39932">Cuaderno de apuntes tomados en Londres signado con el número VII</a></li>
+        <li><a href="recurso/obra/40066">Diploma otorgado por la Real Academia Española a don Andrés Bello</a></li>
+        <li><a href="recurso/obra/40021">Sobre algunos de los romances a Carlomagno posteriores a la crónica del Arzobispo Turpin</a></li>
       </ul>
     </div>
     <div id="busquedas" class="col-sm-6">
@@ -82,7 +82,7 @@
           <p>20 de los 35 Presidentes de Chile democráticamente elegidos fueron alumnos de la Casa de Bello. Haz clic en su imagen para acceder a su obra disponible.</p>
         </div>
         <div id="presidentes-de-chile-img" class="col-xs-6">
-          img
+          <img src="d/img/blah.png" alt="" class="img-responsive"/>
         </div>
       </div>   
     </div>
@@ -93,29 +93,29 @@
           <p>Conoce alguno de los hitos y aniversarios de obras y autores que se conmemorarán durante este 2015.</p>
         </div>
         <div id="efemerides-slider" class="col-xs-6">              
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <div id="carousel-example-generic" class="carousel slide noresize" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
               <li data-target="#carousel-example-generic" data-slide-to="1"></li>
               <li data-target="#carousel-example-generic" data-slide-to="2"></li>
             </ol>
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img src="http://photos1.blogger.com/blogger/2405/814/400/Beckham2.jpg" alt="...">
+            <div class="carousel-inner noresize" role="listbox">
+              <div class="item active noresize">
+                <img src="http://www.madrimasd.org/blogs/CienciayPoesia/files/2015/03/Nicanor-parra1.jpg" alt="...">
                 <div class="carousel-caption noresize">
-                  <p>La primera edición de los Anales de la Universidad de Chile (1895) cumple 120 años.</p>
+                  <p>Nicanor Parra</p>
                 </div>
               </div>
-              <div class="item">
-                <img src="http://xtudotudo4.zip.net/images/braxjap_2.jpg" alt="...">
-                <div class="carousel-caption">
-                  <p>Texto descriptivo</p>
+              <div class="item noresize">
+                <img src="http://www.archivochile.com/Fotos/gm.jpg" alt="...">
+                <div class="carousel-caption noresize">
+                  <p>Gabriela Mistral</p>
                 </div>
               </div>
-              <div class="item">
-                <img src="http://futeboleuropeu2009.zip.net/images/roonet.jpg" alt="...">
-                <div class="carousel-caption">
-                  <p>Texto descriptivo</p>
+              <div class="item noresize">
+                <img src="https://lachasconablog.files.wordpress.com/2014/03/pablo-neruda.jpg" alt="...">
+                <div class="carousel-caption noresize">
+                  <p>Pablo Neruda</p>
                 </div>
               </div>
             </div>
@@ -139,29 +139,38 @@
   <div class="row text-center">
     <div class="col-sm-6">
       <h3 class="text-uppercase">Quiénes somos</h3>
-      <p style="text-align:justify">El portal datos.uchile.cl es un lugar donde es posible encontrar todo tipo de información relacionada a la Universidad de Chile.<br/>Contiene datos abiertos a toda persona o entidad que desee consultar por obras, revistas, autores, presidentes de Chile, investigación, tesis y un sin fin de datos que son explorables cómoda y libremente.</p>
+      <p class="text-justify">
+        El portal datos.uchile.cl es un lugar donde es posible encontrar todo tipo de información relacionada a la Universidad de Chile. Contiene datos abiertos a toda persona o entidad 
+        que desee consultar por obras, revistas, autores, presidentes de Chile, investigación, tesis y un sin fin de datos que son explorables cómoda y libremente.
+      </p>
       <a href="#" class="btn btn-mas">Más</a>
     </div>
     <div class="col-sm-6">
       <h3 class="text-uppercase">¿Qué es Open Data?</h3>
-      <p style="text-align:justify">Open Data o Datos Abiertos es una filosofía que tiene por objetivo mostrar a todo el mundo una grán cantidad de datos de forma libre y reutilizable, sin el obstáculo que implica la presencia de patentes, licencias o copyright.</p>
+      <p class="text-justify">
+        Open Data o Datos Abiertos es una filosofía que tiene por objetivo mostrar a todo el mundo una grán cantidad de datos de forma libre y reutilizable, sin el obstáculo que implica 
+        la presencia de patentes, licencias o copyright.
+      </p>
       <a href="#" class="btn btn-mas">Más</a>
     </div>
   </div>
   <div class="row text-center">
     <div class="col-sm-6">
       <h3 class="text-uppercase">Metodología</h3>
-      <p style="text-align:justify">Aplicación creada en lenguaje PHP que conecta a un triplestore Virtuoso, el cual esta positivamente evaluado por su buen funcionamiento promedio respecto a otros triplestores.<br/>
-        Para la generación de ETLs se utilizó el lenguaje Java. Estos pasan de distintos XML de bases de datos relacionales a archivos en formato RDF, almacenables en Virtuoso siguiendo como pauta una Ontología, la cual es el esqueleto de las relaciones semánticas entre los distintos tipos de datos.</p>
+      <p class="text-justify">
+        Aplicación creada en lenguaje PHP que conecta a un triplestore Virtuoso, el cual esta positivamente evaluado por su buen funcionamiento promedio respecto a otros triplestores.
+        Para la generación de ETLs se utilizó el lenguaje Java. Estos pasan de distintos XML de bases de datos relacionales a archivos en formato RDF, almacenables en Virtuoso siguiendo 
+        como pauta una Ontología, la cual es el esqueleto de las relaciones semánticas entre los distintos tipos de datos.
+      </p>
       <a href="#" class="btn btn-mas">Más</a>
     </div>
     <div class="col-sm-6">
       <h3 class="text-uppercase">Cómo usar el sitio</h3>
-      <p style="text-align:justify">Le invitamos a utilizar las diferentes opciones que ofrece el sitio para realizar búsquedas.<br/>
-        Existe una forma simple y otra más técnica para búsquedas de mayor complejidad.<br/>
-        La primera consta de un buscador que recibe texto y se realiza la búsqueda según las coincidencias con éste.<br/>
-        La segunda forma es utilizar el Endpoint con el cual mediante el lenguaje SparQL, que es similar al popular SQL, se realizan consultas más elaboradas que vayan de acuerdo a lo deseado. 
-        <br/>Para aprender a usar el Endpoint, haga click <a href="#"><b>AQUÍ</b></a>.</p>
+      <p class="text-justify">
+        Le invitamos a utilizar las diferentes opciones que ofrece el sitio para realizar búsquedas. Existe una forma simple y otra más técnica para búsquedas de mayor complejidad.
+        La primera consta de un buscador que recibe texto y se realiza la búsqueda según las coincidencias con éste, mientras que la segunda forma es utilizar el Endpoint con el cual 
+        mediante el lenguaje SparQL, que es similar al popular SQL, se realizan consultas más elaboradas que vayan de acuerdo a lo deseado. 
+      </p>
       <a href="#" class="btn btn-mas">Más</a>
     </div>
   </div>

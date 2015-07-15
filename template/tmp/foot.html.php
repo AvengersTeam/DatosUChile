@@ -73,10 +73,10 @@ $( function() {
       window.location.href = item.url;
     }
   } );
-  $( 'div.row.adjust' ).each( function() {
+  $( 'div.adjust' ).each( function() {
     var maxHeight = 0;
     $(this).find( 'div' ).each( function() { maxHeight = maxHeight < $(this).innerHeight() ? $(this).innerHeight() : maxHeight; } );
-    $(this).find( 'div' ).each( function() { if( ! $(this).hasClass( 'noresize' ) ) $(this).innerHeight( maxHeight ); } );
+    $(this).find( 'div' ).each( function() { if( ! $(this).hasClass( 'noresize' ) ) $(this).innerHeight( maxHeight-20 ); } );
   } );
  
 <?php  if( $is_index ) {  ?>

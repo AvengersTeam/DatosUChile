@@ -56,6 +56,24 @@ foreach( $res['results']['bindings'] as $v ) {
   if( preg_match( '/(title|name)$/', $v['b']['value'] ) ) $nombre = $v['c']['value']; 
 }
 
+//print_a( strcmp( $id, "201-0092260" ) );exit;
+if( strcmp( $id, "201-0092260" ) === 0 ) {
+  $sp = urlencode( "
+prefix frbrer: <http://iflastandards.info/ns/fr/frbr/frbrer/>
+prefix dct: <http://purl.org/dc/terms/>
+
+select distinct ?a ?b ?c where { 
+  ?a ?b ?c . 
+  ?a a frbrer:C1001 . 
+  ?a dct:creator ?m .
+  filter( regex( str( ?m ), 'http://datos.uchile.cl/recurso/autoridad/201-0092260' ) ) .
+  filter( regex( str( ?b ), 'http://purl.org/dc/elements/1.1/title' ) )
+} limit 10  
+" );
+  $url2 = "http://datos.uchile.cl/sparql?query=$sp&format=".urlencode( 'application/sparql-results+json' );
+  $obras = json_decode( wget( $url2 ), TRUE );
+}
+
 $require_base = TRUE; //hack for relative urls
 include( template( '../template/head.html' ) );
 include( template( '../template/ficha.html' ) );

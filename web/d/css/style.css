@@ -183,6 +183,11 @@ ul.typeahead.dropdown-menu li.active a {
   background-color: #444;
 }
 
+ul.bg-blanco {
+  height: 100%;
+}
+
+
 /** ficha **/
 div.rec-nombre {
   color: #fff;

@@ -7,6 +7,7 @@
   <h3>Perfil</h3>
   <div class="row">
     <div class="col-xs-6 bg-blanco">
+      <p><strong>Nombre: </strong>{$nombre}</p>
       <!-- foreach( $res['results']['bindings'] as $v ) { -->
       <p><strong>{$v['b']['value']}:</strong><br/> {$v['c']['type']=='uri'?'<a href="'.$v['c']['value'].'">'.$v['c']['value'].'</a>':$v['c']['value']}</p>
       <br/>
@@ -14,3 +15,17 @@
     </div>
   </div>
 </section>
+<!-- if( $obras ) { -->
+<section>
+  <h3>Algunas Obras del Autor</h3>
+  <div class="row">
+    <div class="col-xs-6 bg-blanco">
+      <ul>
+  <!-- foreach( $obras['results']['bindings'] as $v ) { -->
+  <li><a href="{$v['a']['value']}">{$v['c']['value']}</a></li><br/>
+  <!-- } -->
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- } -->
