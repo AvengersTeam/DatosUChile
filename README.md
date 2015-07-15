@@ -21,3 +21,13 @@ Para que esto funcione se debe habilitar el modulo **proxy_http** con:
 a2enmod proxy_http
 ```
 
+Además, la carpeta *web/* es la unica que debe ser visible a traves de "Internet" por lo tanto la configuración del VirtualHost debe apuntar a esa carpeta. Un ejemplo para hacer aquello es:
+
+```
+ServerName datos.uchile.cl
+DocumentRoot /var/www/html/DatosUchile/web
+
+<Directory /var/www/html/DatosUChile/web>
+	AllowOverride All
+</Directory>
+```
